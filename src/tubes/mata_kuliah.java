@@ -29,5 +29,11 @@ public class mata_kuliah {
     public void setNamaMatkul(String namaMatkul) {
         this.namaMatkul = namaMatkul;
     }
+
+    @Override
+    public String toString() {
+    return this.namaMatkul+  " - " + this.sks + " SKS";
+    }
+    
     
 }

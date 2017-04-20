@@ -24,48 +24,47 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+              <Component id="btnDaftar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="login" min="-2" pref="79" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="daftar" min="-2" pref="82" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="exit" min="-2" pref="77" max="-2" attributes="0"/>
-              <EmptySpace pref="96" max="32767" attributes="0"/>
+              <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="btnKeluar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="118" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="login" alignment="3" min="-2" pref="81" max="-2" attributes="0"/>
-                  <Component id="daftar" alignment="3" min="-2" pref="81" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                      <Component id="exit" min="-2" pref="77" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnDaftar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnKeluar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="173" max="32767" attributes="0"/>
+              <EmptySpace pref="162" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="login">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Login"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="daftar">
+    <Component class="javax.swing.JButton" name="btnDaftar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Daftar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDaftarActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="exit">
+    <Component class="javax.swing.JButton" name="btnLogin">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Exit"/>
+        <Property name="text" type="java.lang.String" value="Login"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnKeluar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Keluar"/>
       </Properties>
     </Component>
   </SubComponents>

@@ -5,25 +5,44 @@
  */
 package tubes.control;
 
-import tubes.GUI.LoginGui;
-import tubes.GUI.daftarGUI;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import tubes.Aplikasi;
 import tubes.GUI.menuGUI;
 
 /**
  *
  * @author MARCHIO
  */
-public class menuHandler {
- private LoginGui login;
+public class menuHandler implements ActionListener {
+ Aplikasi model;
  private menuGUI view;
  
- private daftarGUI daftar; 
 
- public menuHandler(){
-       view = new menuGUI();
+ public menuHandler(Aplikasi model){
+        view = new menuGUI();
         view.setVisible(true);
         view.addActionListener(this);
-        t
+        this.model = model;
  }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        Object click = e.getSource();
+        if (click.equals(view.getBtnDaftar())) {
+            new daftarHandler(model);
+            view.dispose();
+        }
+        else if (click.equals(view.getBtnLogin())){
+        new loginHandler(model);
+        view.dispose();
+    }
+        else if (click.equals(view.getBtnKeluar())){
+            view.dispose();
+        }
+        
+    }
+ 
+ 
 
 }

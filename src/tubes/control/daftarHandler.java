@@ -31,7 +31,7 @@ public class daftarHandler implements ActionListener{
        view.cekStatus();
        
        if (click.equals(view.getBtnDaftar())){
-             if (view.getCbStatus().equals("Dosen")){
+             if (view.getTitle().equals("Dosen")){
            String nama = view.getName();
            String pw = view.getPw();
            String user = view.getUsername();
@@ -39,20 +39,22 @@ public class daftarHandler implements ActionListener{
            long nip = view.getNIP();
            model.addDosen(nama, kode, nip, user, pw);
            view.reset();
-          // view.setMahasiswa();
-            JOptionPane.showMessageDialog(view, "Terdaftar");
-            view.dispose();
+           JOptionPane.showMessageDialog(view,"Data Berhasil Disimpan");
            }
            else 
-               if (view.getCbStatus().equals("Mahasiswa")){
+               if (view.getTitle().equals("Mahasiswa")){
            String nama = view.getName();
            String pw = view.getPw();
            String user = view.getUsername();
            long nip = view.getNIP();  
            model.addMahasiswa(nama, nip, user, pw);
-           JOptionPane.showMessageDialog(view, "Terdaftar");
-           view.dispose();
+           view.reset();
+           JOptionPane.showMessageDialog(view,"Data Berhasil disimpan");
            }
+             
+        }else if (click.equals(view.getBtnBatal())){
+            view.dispose();
+            new menuHandler(model);
         }
     }
 }

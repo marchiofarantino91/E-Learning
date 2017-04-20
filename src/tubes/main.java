@@ -8,6 +8,7 @@ package tubes;
 import tubes.GUI.daftarGUI;
 import tubes.control.daftarHandler;
 import tubes.control.loginHandler;
+import tubes.control.menuHandler;
 
 /**
  *
@@ -24,8 +25,8 @@ public class main {
 //       mahasiswa m2 = new mahasiswa("Ander",1301154223,"Informatika");
 //       
        Aplikasi main = new Aplikasi();
-       loginHandler login = new loginHandler(main);
-       daftarHandler daftaar = new daftarHandler(main);
+     
+       new menuHandler(main);
        /*
        do{
        main.mainMenu();

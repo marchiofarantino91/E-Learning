@@ -10,7 +10,7 @@ import javax.swing.JButton;
 
 /**
  *
- * @author MARCHIO
+ * @author march
  */
 public class menuGUI extends javax.swing.JFrame {
 
@@ -30,67 +30,74 @@ public class menuGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        login = new javax.swing.JButton();
-        daftar = new javax.swing.JButton();
-        exit = new javax.swing.JButton();
+        btnDaftar = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
+        btnKeluar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        login.setText("Login");
-        login.setToolTipText("");
+        btnDaftar.setText("Daftar");
+        btnDaftar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDaftarActionPerformed(evt);
+            }
+        });
 
-        daftar.setText("Daftar");
+        btnLogin.setText("Login");
 
-        exit.setText("Exit");
+        btnKeluar.setText("Keluar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(btnDaftar)
                 .addGap(26, 26, 26)
-                .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addComponent(btnLogin)
+                .addGap(26, 26, 26)
+                .addComponent(btnKeluar)
+                .addContainerGap(118, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(115, 115, 115)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(173, Short.MAX_VALUE))
+                    .addComponent(btnDaftar)
+                    .addComponent(btnLogin)
+                    .addComponent(btnKeluar))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDaftarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDaftarActionPerformed
 public void addActionListener(ActionListener e){
-    daftar.addActionListener(e);
-    login.addActionListener(e);
-    exit.addActionListener(e);
+    btnDaftar.addActionListener(e);
+    btnKeluar.addActionListener(e);
+    btnLogin.addActionListener(e);
 }
-    public JButton getDaftar() {
-        return daftar;
+    public JButton getBtnDaftar() {
+        return btnDaftar;
     }
 
-    public JButton getExit() {
-        return exit;
+    public JButton getBtnKeluar() {
+        return btnKeluar;
     }
 
-    public JButton getLogin() {
-        return login;
+    public JButton getBtnLogin() {
+        return btnLogin;
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton daftar;
-    private javax.swing.JButton exit;
-    private javax.swing.JButton login;
+    private javax.swing.JButton btnDaftar;
+    private javax.swing.JButton btnKeluar;
+    private javax.swing.JButton btnLogin;
     // End of variables declaration//GEN-END:variables
 }

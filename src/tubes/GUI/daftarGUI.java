@@ -12,6 +12,7 @@ import javax.swing.JComboBox;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import tubes.Aplikasi;
 
 /**
  *
@@ -24,6 +25,10 @@ public class daftarGUI extends javax.swing.JFrame {
      */
     public daftarGUI() {
         initComponents();
+    }
+
+    public daftarGUI(Aplikasi model) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
